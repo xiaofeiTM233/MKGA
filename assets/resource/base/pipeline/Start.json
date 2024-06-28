@@ -1,0 +1,147 @@
+{
+  "M-启动": {
+    "action": "StartApp",
+    "package": "com.kugou.android.lite/com.kugou.android.app.splash.SplashActivity",
+    "next": [
+      "Stop"
+    ],
+    "focus": true
+  },
+  "M-开屏": {
+    "post_delay": 10000,
+    "next": [
+      "我再想想",
+      "X",
+      "Stop"
+    ],
+    "focus": true
+  },
+  "M-领取": {
+    "post_delay": 5000,
+    "next": [
+      "今日已领取",
+      "领取VIP",
+      "GETVIP",
+      "活动中心",
+      "go我的"
+    ],
+    "focus": true
+  },
+  "X": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "X.png"
+    ],
+    "threshold": [
+      0.999
+    ],
+    "target_offset": [
+      3,
+      3,
+      0,
+      0
+    ],
+    "action": "Click",
+    "is_sub": true
+  },
+  "我再想想": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "我再想想.png"
+    ],
+    "threshold": [
+      0.999
+    ],
+    "target_offset": [
+      3,
+      3,
+      0,
+      0
+    ],
+    "is_sub": true,
+    "action": "Click"
+  },
+  "Stop": {
+    "action": "StopTask"
+  },
+  "go我的": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "我的.png"
+    ],
+    "threshold": [
+      0.9
+    ],
+    "action": "Click",
+    "target": true,
+    "is_sub": true
+  },
+  "活动中心": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "活动福利中心.png"
+    ],
+    "threshold": [
+      0.99
+    ],
+    "action": "Click",
+    "is_sub": true,
+    "target_offset": [
+      3,
+      5,
+      0,
+      0
+    ]
+  },
+  "GETVIP": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "GETVIP.png",
+      "GETVIP1.png"
+    ],
+    "threshold": [
+      0.99
+    ],
+    "action": "Click",
+    "is_sub": true,
+    "target_offset": [
+      3,
+      3,
+      0,
+      0
+    ]
+  },
+  "领取VIP": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "领取VIP.png"
+    ],
+    "threshold": [
+      0.8
+    ],
+    "action": "Click",
+    "target_offset": [
+      3,
+      3,
+      0,
+      0
+    ],
+    "is_sub": true,
+    "next": [
+      "Stop"
+    ]
+  },
+  "今日已领取": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "今日已领取.png"
+    ],
+    "threshold": [
+      0.8
+    ],
+    "next": [
+      "Stop"
+    ],
+    "is_sub": true
+  }
+}
