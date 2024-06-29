@@ -78,7 +78,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: MGT-win-${{ matrix.arch }}
+          name: MKGA-win-${{ matrix.arch }}
           path: "install"
 
   ubuntu:
@@ -110,7 +110,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: MGT-linux-${{ matrix.arch }}
+          name: MKGA-linux-${{ matrix.arch }}
           path: "install"
 
   macos:
@@ -142,7 +142,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: MGT-macos-${{ matrix.arch }}
+          name: MKGA-macos-${{ matrix.arch }}
           path: "install"
 
   release:

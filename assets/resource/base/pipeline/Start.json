@@ -10,8 +10,6 @@
   "M-开屏": {
     "post_delay": 10000,
     "next": [
-      "我再想想",
-      "X",
       "Stop"
     ],
     "focus": true
@@ -19,6 +17,8 @@
   "M-领取": {
     "post_delay": 5000,
     "next": [
+      "X",
+      "我再想想",
       "今日已领取",
       "领取VIP",
       "GETVIP",
@@ -45,18 +45,9 @@
     "is_sub": true
   },
   "我再想想": {
-    "recognition": "TemplateMatch",
-    "template": [
-      "我再想想.png"
-    ],
-    "threshold": [
-      0.999
-    ],
-    "target_offset": [
-      3,
-      3,
-      0,
-      0
+    "recognition": "OCR",
+    "expected": [
+      "我再想想"
     ],
     "is_sub": true,
     "action": "Click"
@@ -126,10 +117,7 @@
       0,
       0
     ],
-    "is_sub": true,
-    "next": [
-      "Stop"
-    ]
+    "is_sub": true
   },
   "今日已领取": {
     "recognition": "TemplateMatch",
